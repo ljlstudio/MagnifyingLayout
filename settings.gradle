@@ -1,0 +1,3 @@
+rootProject.name = "MagnifyingLayout"
+include ':app'
+include ':magnifyinglib'
