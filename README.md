@@ -6,6 +6,9 @@
 
 使用步骤:
 
+## 集成
+
+
 **Step1:** 
 项目根目录build文件中配置jitpack maven
 ```
@@ -19,4 +22,47 @@ app目录build文件中配置引用
 ```
     implementation 'com.github.ljlstudio:MagnifyingLayout:Tag' ..tag为最新release 版本（1.0.1）
 ```
+
+## 代码中使用
+
+
+**Step1**
+布局中使用MagnifierAutolayout
+```
+
+    <com.lee.magnifyinglib.MagnifierAutoLayout
+        android:id="@+id/magnifier"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+```
+
+**Step2**
+创建builder设置放大镜参数并使用
+```
+
+MagnifierAutoLayout magnifierAutoLayout = findViewById(R.id.magnifier);
+ 
+ MagnifierBuilder magnifierBuilder = new MagnifierBuilder(this)
+                .widthMagnifierRadius(DisplayUtil.dip2px(this, 50))
+                .widthMagnifierScaleRate(1.3f)
+                .widthMagnifierShouldAutoMoveMagnifier(true)
+                .widthMagnifierStrokeWidth(DisplayUtil.dip2px(this, 5))
+                .widthMagnifierLeftSpace(DisplayUtil.dip2px(this, 10))
+                .widthMagnifierTopSpace(DisplayUtil.dip2px(this, 100));
+                
+ magnifierAutoLayout.setMagnifierBuilder(magnifierBuilder);
+
+```
+
+**Step3**
+在需要手势的地方传递MotionEvent以及需要放大的布局给MagnifierAutoLayout
+```
+ @Override
+    public boolean onTouch(View v, MotionEvent event) {
+        magnifierAutoLayout.setTouch(event, touchLayout);
+        return true;
+
+    }
+```
+
 
