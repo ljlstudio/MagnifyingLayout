@@ -64,5 +64,5 @@ MagnifierAutoLayout magnifierAutoLayout = findViewById(R.id.magnifier);
 
     }
 ```
-
+## 未完待续。。后续会增加更多支持
 
