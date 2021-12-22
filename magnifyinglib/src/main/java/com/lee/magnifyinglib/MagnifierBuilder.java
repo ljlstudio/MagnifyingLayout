@@ -2,7 +2,8 @@ package com.lee.magnifyinglib;
 
 import android.content.Context;
 
-import com.lee.magnifyingapp.utils.DisplayUtil;
+import com.lee.magnifyinglib.utils.DisplayUtil;
+
 
 /**
  * Author : 李嘉伦

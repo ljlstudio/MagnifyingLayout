@@ -35,5 +35,6 @@ android {
 }
 
 dependencies {
+    implementation 'androidx.annotation:annotation:1.1.0'
     compile fileTree(dir: 'libs', include: ['*.jar'])
 }
